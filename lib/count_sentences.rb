@@ -10,7 +10,6 @@ class String
     end
   end
 
-  def question?
     if self.end_with? ("?")
       true
     else
@@ -27,5 +26,5 @@ class String
   end
 
   def count_sentences
-    self.split(/\.|\?|\!/).delete_if
+    self.split(/\.|\?|\!/).delete_if {|w|w.size<2}
 end
