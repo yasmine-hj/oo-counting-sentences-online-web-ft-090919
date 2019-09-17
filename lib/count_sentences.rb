@@ -27,6 +27,6 @@ def question?
   end
 
   def count_sentences
-    self.split (/\.|\?|\!/) delet
+    self.split (/\.|\?|\!/).delete_if size<2
   end
 end
